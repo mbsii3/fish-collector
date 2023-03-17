@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>All Fish</h1>
+
+{% for f in fish %}
+<div class="card">
+    <a href="/fish/{{ f.id }}">
+        <div class="card-content">
+            <span class="card-title">{{ f.name }}</span>
+            <p>Species: {{ f.species }}</p>
+            <p>Color: {{ f.color }}</p>
+            <p>Water Type:  {{ f.water_type }}</p>
+        </div>
+    </a>
+</div>
+{% endfor %}
+
+{% endblock %}
